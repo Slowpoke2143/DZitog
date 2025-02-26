@@ -1,0 +1,15 @@
+﻿  ClientTCP.cpp
+C:\Users\root\Desktop\HOMEWORK\server\server\ClientTCP.cpp(11,49): warning C4309: инициализация: усечение константного значения
+C:\Users\root\Desktop\HOMEWORK\server\server\ClientTCP.cpp(19,21): warning C4244: =: преобразование "SOCKET" в "int", возможна потеря данных
+C:\Users\root\Desktop\HOMEWORK\server\server\ClientTCP.cpp(46,54): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+  Database.cpp
+  main.cpp
+  ServerTCP.cpp
+C:\Users\root\Desktop\HOMEWORK\server\server\ServerTCP.cpp(13,34): warning C4309: инициализация: усечение константного значения
+C:\Users\root\Desktop\HOMEWORK\server\server\ServerTCP.cpp(21,27): warning C4244: =: преобразование "SOCKET" в "int", возможна потеря данных
+C:\Users\root\Desktop\HOMEWORK\server\server\ServerTCP.cpp(50,26): warning C4244: инициализация: преобразование "SOCKET" в "int", возможна потеря данных
+C:\Users\root\Desktop\HOMEWORK\server\server\ServerTCP.cpp(84,42): warning C4101: e: неиспользованная локальная переменная
+C:\Users\root\Desktop\HOMEWORK\server\server\ServerTCP.cpp(160,42): warning C4101: e: неиспользованная локальная переменная
+C:\Users\root\Desktop\HOMEWORK\server\server\ServerTCP.cpp(199,59): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+  Создание кода...
+  server.vcxproj -> C:\Users\root\Desktop\HOMEWORK\server\x64\Debug\server.exe
