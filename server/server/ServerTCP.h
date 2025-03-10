@@ -1,8 +1,9 @@
-#ifndef TCPSERVER_H
+п»ї#ifndef TCPSERVER_H
 #define TCPSERVER_H
 
 #include <string>
 #include <map>
+#include "Logger.h" // Р”РѕР±Р°РІР»РµРЅ include РґР»СЏ Logger
 
 class TCPServer {
 public:
@@ -14,13 +15,14 @@ public:
     void stopServer();
 
 private:
-    void loadUsersFromFile();  // Декларация функции загрузки пользователей
-    void saveUsersToFile();  // Декларация функции сохранения пользователей
+    void loadUsersFromFile();  // Р”РµРєР»Р°СЂР°С†РёСЏ С„СѓРЅРєС†РёРё Р·Р°РіСЂСѓР·РєРё РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№
+    void saveUsersToFile();  // Р”РµРєР»Р°СЂР°С†РёСЏ С„СѓРЅРєС†РёРё СЃРѕС…СЂР°РЅРµРЅРёСЏ РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№
 
     int _port;
     int _serverSocket;
-    std::map<std::string, std::string> users;  // Хранение пользователей
-    std::map<int, std::string> clientUsernames;  // Хранение пользователей, подключенных к серверу
+    std::map<std::string, std::string> users;  // РҐСЂР°РЅРµРЅРёРµ РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№
+    std::map<int, std::string> clientUsernames;  // РҐСЂР°РЅРµРЅРёРµ РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№, РїРѕРґРєР»СЋС‡РµРЅРЅС‹С… Рє СЃРµСЂРІРµСЂСѓ
+    Logger logger; // Р”РѕР±Р°РІР»РµРЅ Р»РѕРіРіРµСЂ
 };
 
 #endif // TCPSERVER_H

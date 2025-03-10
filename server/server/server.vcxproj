@@ -139,6 +139,7 @@
   <ItemGroup>
     <ClInclude Include="ClientTCP.h" />
     <ClInclude Include="DataBase.h" />
+    <ClInclude Include="Logger.h" />
     <ClInclude Include="ServerTCP.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

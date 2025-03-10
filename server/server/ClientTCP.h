@@ -1,7 +1,8 @@
-#ifndef TCPCLIENT_H
+﻿#ifndef TCPCLIENT_H
 #define TCPCLIENT_H
 
 #include <string>
+#include "Logger.h" // Добавлен include для Logger
 
 class TCPClient {
 public:
@@ -15,8 +16,7 @@ private:
     std::string _serverIp;
     int _port;
     int _socket;
+    Logger logger; // Добавлен логгер
 };
 
 #endif // TCPCLIENT_H
-
-#pragma once

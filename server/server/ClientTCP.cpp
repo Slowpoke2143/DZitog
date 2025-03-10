@@ -1,4 +1,4 @@
-#define _WINSOCK_DEPRECATED_NO_WARNINGS
+﻿#define _WINSOCK_DEPRECATED_NO_WARNINGS
 #include "ClientTCP.h"
 #include <iostream>
 #include <cstring>
@@ -43,6 +43,7 @@ bool TCPClient::connectToServer() {
 }
 
 void TCPClient::sendMessage(const std::string& message) {
+    logger.log("You: " + message); // Логируем отправленное сообщение
     if (send(_socket, message.c_str(), message.length(), 0) == SOCKET_ERROR) {
         std::cerr << "Message send failed!" << std::endl;
     }
@@ -56,7 +57,9 @@ void TCPClient::receiveMessage() {
     int bytesReceived = recv(_socket, buffer, sizeof(buffer) - 1, 0);
     if (bytesReceived > 0) {
         buffer[bytesReceived] = '\0';
-        std::cout << "Received: " << buffer << std::endl;
+        std::string receivedMessage(buffer);
+        logger.log("Server: " + receivedMessage); // Логируем полученное сообщение
+        std::cout << "Received: " << receivedMessage << std::endl;
     }
     else if (bytesReceived == 0) {
         std::cout << "Connection closed by server." << std::endl;

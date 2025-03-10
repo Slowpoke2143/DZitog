@@ -1,4 +1,4 @@
-#include "ServerTCP.h"
+﻿#include "ServerTCP.h"
 #include <iostream>
 #include <winsock2.h>
 #include <ws2tcpip.h>
@@ -195,6 +195,7 @@ void TCPServer::handleClient(int clientSocket) {
 }
 
 void TCPServer::sendToAllClients(const std::string& message) {
+    logger.log(message); // Логируем сообщение
     for (auto& client : clientUsernames) {
         send(client.first, message.c_str(), message.length(), 0);
     }
